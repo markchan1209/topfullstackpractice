@@ -5,6 +5,8 @@ import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
+  app.enableCors()
+  
   const options = new DocumentBuilder()
     .setTitle('全棧之巔 後台管理 ＡＰＩ 文件')
     .setDescription('提供後台管理介面調用ＡＰＩ')
