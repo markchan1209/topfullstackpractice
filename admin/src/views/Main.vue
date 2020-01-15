@@ -20,7 +20,7 @@
         </el-aside>
         <el-container>
             <el-header>
-                <h3>全棧之巔 - 後台管理介面</h3>
+                <h3>後台管理介面</h3>
             </el-header>
             <el-main>
                 <router-view :key="$router.path"></router-view>

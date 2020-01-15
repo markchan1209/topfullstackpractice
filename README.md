@@ -1,2 +1,6 @@
 # topfullstackpractice
-全棧Nestjs Nodejs Mongodb Vuejs 來源 https://github.com/topfullstack/topfullstack
+
+F:
+vue ele form + Avue  + Vue + TypeScript 
+B:
+Nestjs + MongoDB  + TypeScript

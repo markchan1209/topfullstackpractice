@@ -6,7 +6,7 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   const options = new DocumentBuilder()
-    .setTitle('全棧之巔 行動裝置 ＡＰＩ文件')
+    .setTitle('行動裝置 ＡＰＩ文件')
     .setDescription('提供行動裝置資料調用ＡＰＩ服務')
     .setVersion('1.0')
     .build();

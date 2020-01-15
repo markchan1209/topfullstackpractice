@@ -4,7 +4,7 @@
       <ele-form 
         :form-data="data"
         :form-desc="fields"
-        :request="submit">
+        :request-fn="submit">
       </ele-form>
   </div>
 </template>
@@ -21,9 +21,8 @@ export default class CourseEdit extends Vue {
     data = {};
 
     fields = {
-        _id : { label : 'ID'},
-        name : { label : '課程名稱'},
-        cover : { label : '課程封面圖'},
+        name : { label : '課程名稱', type:'input'},
+        cover : { label : '課程封面圖', type:'input'},
     }
 
     //把方法當屬性使用 ES6
@@ -32,15 +31,20 @@ export default class CourseEdit extends Vue {
     }
 
     async fetch(){
-        const res = await this.$http.get('courses')
-        this.data = res.data
+        const res = await this.$http.get(`courses/${this.id}`);
+        this.data = res.data;
     }
     async submit(data) {
-        // global.console.log(data);
+        const url = this.isNew ? `courses` : `courses/${this.id}`
+        const method = this.isNew ? 'post' : 'put'
+        await this.$http[method](url, data)
+        this.$message.success('保存成功')
+        this.data = {}
+        this.$router.go(-1)
     }
     //初始化
     created() {
-        this.fetch()
+         !this.isNew && this.fetch();
     }
 }
 </script>

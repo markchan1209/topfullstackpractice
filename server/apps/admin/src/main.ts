@@ -8,7 +8,7 @@ async function bootstrap() {
   app.enableCors()
   
   const options = new DocumentBuilder()
-    .setTitle('全棧之巔 後台管理 ＡＰＩ 文件')
+    .setTitle('後台管理 ＡＰＩ 文件')
     .setDescription('提供後台管理介面調用ＡＰＩ')
     .setVersion('1.0')
     .build();

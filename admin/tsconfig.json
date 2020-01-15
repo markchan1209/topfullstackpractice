@@ -8,6 +8,7 @@
     "moduleResolution": "node",
     "experimentalDecorators": true,
     "esModuleInterop": true,
+    "noImplicitAny": false, // 避免 implicitly has an 'any' type 錯誤
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "baseUrl": ".",
