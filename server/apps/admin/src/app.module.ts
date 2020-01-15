@@ -5,10 +5,12 @@ import { AppService } from './app.service';
 import { UsersController } from './users/users.controller';
 import { CoursesController } from './courses/courses.controller';
 import { EpisodesController } from './episodes/episodes.controller';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
-    DbModule
+    DbModule,
+    AuthModule
   ],
   controllers: [AppController, UsersController, CoursesController, EpisodesController],
   providers: [AppService],
